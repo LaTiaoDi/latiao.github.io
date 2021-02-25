@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>mysql教程</title>
+    <link href="/2021/02/25/mysql/"/>
+    <url>/2021/02/25/mysql/</url>
+    
+    <content type="html"><![CDATA[<h2 id="mySQL教程"><a href="#mySQL教程" class="headerlink" title="mySQL教程"></a>mySQL教程</h2><h3 id="sql语句"><a href="#sql语句" class="headerlink" title="sql语句"></a>sql语句</h3><p>​    一、查询表中所有数据</p><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> 表名称<br></code></pre></td></tr></table></figure><p>​    二、向数据表中插入新的数据行</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">insert</span> into 表名称 (列<span class="hljs-number">1</span>，列<span class="hljs-number">2</span>，...)values (值<span class="hljs-number">1</span>，值<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure><p>​     三、修改表中的数据</p><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">update</span> 表名称 <span class="hljs-keyword">set</span> 列名称 = 新增 <span class="hljs-keyword">where</span> 列名称=某值<br></code></pre></td></tr></table></figure><p>​    四、删除表中数据</p><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> 表名称 <span class="hljs-keyword">where</span> 列名称 = 值<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>node教程</title>
     <link href="/2021/02/22/node/"/>
     <url>/2021/02/22/node/</url>
