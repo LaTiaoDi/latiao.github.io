@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Session与JWT</title>
+    <link href="/2021/02/26/%E8%AE%A4%E8%AF%81/"/>
+    <url>/2021/02/26/%E8%AE%A4%E8%AF%81/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Session-认证机制与JWT认证机制"><a href="#Session-认证机制与JWT认证机制" class="headerlink" title="Session 认证机制与JWT认证机制"></a><strong>Session</strong> 认证机制与JWT认证机制</h2><h4 id="1、不同开发模式下的身份认证"><a href="#1、不同开发模式下的身份认证" class="headerlink" title="1、不同开发模式下的身份认证"></a>1、<strong>不同开发模式下的</strong>身份认证</h4><ul><li>服务端渲染推荐使用Session认证机制</li><li>前后端分离推荐用JWT认证机制</li></ul><h4 id="2、Session-认证机制"><a href="#2、Session-认证机制" class="headerlink" title="2、Session 认证机制"></a>2、Session 认证机制</h4><ul><li><p>Cookie 是<strong>存储在用户浏览器中的一段不超过 4 KB 的字符串</strong>。它由一个名称（Name）、一个值（Value）和其它几个用</p><p>于控制 Cookie 有效期、安全性、使用范围的可选属性组成。</p><p>不同域名下的 Cookie 各自独立，每当客户端发起请求时，会<strong>自动</strong>把<strong>当前域名下</strong>所有<strong>未过期的 Cookie</strong> 一同发送到服务器。</p><p><strong>Cookie的几大特性：</strong></p><p>① 自动发送</p><p>② 域名独立</p><p>③ 过期时限</p><p>④ 4KB 限制</p></li><li><p>客户端第一次请求服务器的时候，服务器通过响应头的形式，向客户端发送一个身份认证的Cookie,客户端会自动将Cookie保存在浏览器中。</p><p>随后当客户端浏览器每次请求服务器的时候，浏览器会自动将身份认证相关的Cookie，通过请求头的形式发送给服务器，服务器即可验明客户端的身份</p></li><li><p><strong>Cookie不具有安全性</strong></p><p>由于Cookie是存储在浏览器中的，而且浏览器也提供了读写Cookie的APi，因此Cookie很容易被伪造，不具有安全性，因此不建议服务器将重要的隐私数据，通过Cookie的形式发送给浏览器</p></li><li><p>Sessionr认证机制需要被和Cookie才能实现。由于Cookie默认不支持跨域访问，所以，当涉及前端跨域请求后端口的时候，需要做很多额外的配置，才能实现跨越Session认证</p></li></ul><h4 id="3、JWT认证机制"><a href="#3、JWT认证机制" class="headerlink" title="3、JWT认证机制"></a>3、JWT认证机制</h4><ul><li><p>JWT（全称 JSON Web Token ）是目前最流行的跨域认证解决方案</p></li><li><p>JWT 通常由三部分组成，分别是 Header（头部）、Payload（有效荷载）、Signature（签名）。</p></li><li><p>JWT 的三个组成部分，从前到后分别是 Header、Payload、Signature。</p><p>其中：</p><p>⚫ <strong>Payload</strong> 部分<strong>才是真正的用户信息</strong>，它是用户信息经过加密之后生成的字符串。</p><p>⚫ Header 和 Signature 是<strong>安全性相关</strong>的部分，只是为了保证 Token 的安全性。</p></li><li><p><strong>JWT 的</strong>使用方式</p><p>客户端收到服务器返回的 JWT 之后，通常会将它储存在 localStorage 或 sessionStorage 中。</p><p>此后，客户端每次与服务器通信，都要带上这个 JWT。推荐的做法是<strong>把 JWT 放在 HTTP 请求头的 Authorization 字段</strong></p></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>mysql教程</title>
     <link href="/2021/02/25/mysql/"/>
     <url>/2021/02/25/mysql/</url>
