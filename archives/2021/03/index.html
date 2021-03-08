@@ -17,25 +17,9 @@
   <meta name="description" content="latiao">
   <meta name="author" content="latiao">
   <meta name="keywords" content="">
-  <title>Session与JWT - latiao</title>
+  <title>归档 - latiao</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
-
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  
 
 
 
@@ -63,7 +47,7 @@
 
 
 <body>
-  <header style="height: 70vh;">
+  <header style="height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -162,46 +146,9 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Session与JWT">
+            <span class="h2" id="subtitle" title="归档">
               
             </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-02-26 20:35" pubdate>
-        2021年2月26日 晚上
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      627 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      6
-       分钟
-    </span>
-  
-
-  
-  
-</div>
 
             
           </div>
@@ -214,114 +161,40 @@
 
   <main>
     
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="list-group">
+  <p class="h4">共计 6 篇文章</p>
+  <hr>
+  
+  
+    
       
+      <p class="h5">2021</p>
+    
+    <a href="/2021/03/08/VUE01/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">vue教程</span>
+      <time style="float: right;">03-08</time>
+    </a>
+  
+</div>
 
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">Session与JWT</h1>
-            
-            <div class="markdown-body">
-              <h2 id="Session-认证机制与JWT认证机制"><a href="#Session-认证机制与JWT认证机制" class="headerlink" title="Session 认证机制与JWT认证机制"></a><strong>Session</strong> 认证机制与JWT认证机制</h2><h4 id="1、不同开发模式下的身份认证"><a href="#1、不同开发模式下的身份认证" class="headerlink" title="1、不同开发模式下的身份认证"></a>1、<strong>不同开发模式下的</strong>身份认证</h4><ul>
-<li>服务端渲染推荐使用Session认证机制</li>
-<li>前后端分离推荐用JWT认证机制</li>
-</ul>
-<h4 id="2、Session-认证机制"><a href="#2、Session-认证机制" class="headerlink" title="2、Session 认证机制"></a>2、Session 认证机制</h4><ul>
-<li><p>Cookie 是<strong>存储在用户浏览器中的一段不超过 4 KB 的字符串</strong>。它由一个名称（Name）、一个值（Value）和其它几个用</p>
-<p>于控制 Cookie 有效期、安全性、使用范围的可选属性组成。</p>
-<p>不同域名下的 Cookie 各自独立，每当客户端发起请求时，会<strong>自动</strong>把<strong>当前域名下</strong>所有<strong>未过期的 Cookie</strong> 一同发送到服务器。</p>
-<p><strong>Cookie的几大特性：</strong></p>
-<p>① 自动发送</p>
-<p>② 域名独立</p>
-<p>③ 过期时限</p>
-<p>④ 4KB 限制</p>
-</li>
-<li><p>客户端第一次请求服务器的时候，服务器通过响应头的形式，向客户端发送一个身份认证的Cookie,客户端会自动将Cookie保存在浏览器中。</p>
-<p>随后当客户端浏览器每次请求服务器的时候，浏览器会自动将身份认证相关的Cookie，通过请求头的形式发送给服务器，服务器即可验明客户端的身份</p>
-</li>
-<li><p><strong>Cookie不具有安全性</strong></p>
-<p>由于Cookie是存储在浏览器中的，而且浏览器也提供了读写Cookie的APi，因此Cookie很容易被伪造，不具有安全性，因此不建议服务器将重要的隐私数据，通过Cookie的形式发送给浏览器</p>
-</li>
-<li><p>Sessionr认证机制需要被和Cookie才能实现。由于Cookie默认不支持跨域访问，所以，当涉及前端跨域请求后端口的时候，需要做很多额外的配置，才能实现跨越Session认证</p>
-</li>
-</ul>
-<h4 id="3、JWT认证机制"><a href="#3、JWT认证机制" class="headerlink" title="3、JWT认证机制"></a>3、JWT认证机制</h4><ul>
-<li><p>JWT（全称 JSON Web Token ）是目前最流行的跨域认证解决方案</p>
-</li>
-<li><p>JWT 通常由三部分组成，分别是 Header（头部）、Payload（有效荷载）、Signature（签名）。</p>
-</li>
-<li><p>JWT 的三个组成部分，从前到后分别是 Header、Payload、Signature。</p>
-<p>其中：</p>
-<p>⚫ <strong>Payload</strong> 部分<strong>才是真正的用户信息</strong>，它是用户信息经过加密之后生成的字符串。</p>
-<p>⚫ Header 和 Signature 是<strong>安全性相关</strong>的部分，只是为了保证 Token 的安全性。</p>
-</li>
-<li><p><strong>JWT 的</strong>使用方式</p>
-<p>客户端收到服务器返回的 JWT 之后，通常会将它储存在 localStorage 或 sessionStorage 中。</p>
-<p>此后，客户端每次与服务器通信，都要带上这个 JWT。推荐的做法是<strong>把 JWT 放在 HTTP 请求头的 Authorization 字段</strong></p>
-</li>
-</ul>
 
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                
+
+
+
               </div>
-              
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
-              
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2021/03/08/VUE01/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vue教程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2021/02/25/mysql/">
-                        <span class="hidden-mobile">mysql教程</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
             </div>
-
-            
-          </article>
+          </div>
         </div>
       </div>
-    </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-
     
 
     
@@ -401,15 +274,9 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
